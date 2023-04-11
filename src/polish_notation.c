@@ -8,7 +8,7 @@ int reverse_polish_notation(char *str) {
     char *temp = calloc(MAX_STR, sizeof(char));
     stack *p = NULL;
 
-    while (str[i] != '\n' || str[i] != '\0') {
+    while ((str[i] != '\n' || str[i] != '\0') && res != FAIL) {
         if (is_digit(str[i])) {
             while (is_digit(str[i])) {  // Вариант обработки через функцию
                 temp[count] = str[i];
@@ -18,8 +18,21 @@ int reverse_polish_notation(char *str) {
             temp[count] = '_';
             count++;
         }
-        if (str[i] = '(') {
+        if (str[i] == '(') {
             push(&p, '(');
+            count_staples++;
+        } else if (str[i] == ')') {
+            if (count_staples > 0) {
+                while (p != NULL || p->value != '(') {
+                    temp[count] = (char)pop(&p);
+                    count++;
+                }
+                pop(&p);
+                count_staples--;
+            } else {
+                res = FAIL;
+                continue;
+            }
         }
         if (str[i] == ISALFA) {  // Вариант обработки через define
             if (str[i] == 'x' || str[i] == 'X') {
