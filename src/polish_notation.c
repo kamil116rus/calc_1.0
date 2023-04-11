@@ -6,6 +6,7 @@ int reverse_polish_notation(char *str) {
     int count_staples = 0;  // счетчик скобок
     int i = 0, count = 0;
     char *temp = calloc(MAX_STR, sizeof(char));
+    stack *p = NULL;
 
     while (str[i] != '\n' || str[i] != '\0') {
         if (is_digit(str[i])) {
@@ -14,17 +15,18 @@ int reverse_polish_notation(char *str) {
                 i++;
                 count++;
             }
-            temp[count] = ' ';
+            temp[count] = '_';
             count++;
         }
-
-        if (str[i] == ISALFA) {  // Вариан обработки через define
+        if (str[i] = '(') {
+            push(&p, '(');
+        }
+        if (str[i] == ISALFA) {  // Вариант обработки через define
             if (str[i] == 'x' || str[i] == 'X') {
                 temp[count] = 'x';
                 count++;
             }
-            if
-        }
+            if (is_) }
     }
 }
 
