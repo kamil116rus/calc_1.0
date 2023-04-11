@@ -1,16 +1,10 @@
 #include "polish_notation.h"
 
-char *input_str() {
+int reverse_polish_notation(char *str) {
     printf("Введите  выражение:\n");
-    char *str;
-    str = calloc(MAX_STR, sizeof(char));
-    int i = 0, res = SUCCES;
-    while (str[i] = getchar()) {
-        i++;
-        if (i > MAX_STR - 1) {
-            res = FAIL;
-            break;
-        }
-    }
-    return str;
+    int res = SUCCES;
+    int count_staples = 0;  // счетчик скобок
+    int i = 0;
+    while (str[i] != '\n' || str[i] != '\0') {
+        if (str[i] =) }
 }
