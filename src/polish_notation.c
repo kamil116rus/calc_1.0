@@ -9,7 +9,7 @@ int reverse_polish_notation(char *str) {
 
     while (str[i] != '\n' || str[i] != '\0') {
         if (is_digit(str[i])) {
-            while (is_digit(str[i])) {
+            while (is_digit(str[i])) {  // Вариант обработки через функцию
                 temp[count] = str[i];
                 i++;
                 count++;
@@ -17,9 +17,13 @@ int reverse_polish_notation(char *str) {
             temp[count] = ' ';
             count++;
         }
-        if (str[i] == 'x' || str[i] == 'X') {
-            temp[count] = str[i];
-            count++;
+
+        if (str[i] == ISALFA) {  // Вариан обработки через define
+            if (str[i] == 'x' || str[i] == 'X') {
+                temp[count] = 'x';
+                count++;
+            }
+            if
         }
     }
 }
