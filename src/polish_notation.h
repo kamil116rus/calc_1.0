@@ -1,12 +1,4 @@
-#ifndef STACK_H
-#define STACK_H
-
-#include <stdio.h>
-#include <stdlib.h>
-
-typedef struct stack {
-    char c;
-    struct stack *next;
-} stack;
+#ifndef POLISH_NOTATION_H
+#define POLISH_NOTATION_H
 
 #endif
