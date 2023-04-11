@@ -19,6 +19,7 @@ int reverse_polish_notation(char *str) {
         }
         if (str[i] == 'x' || str[i] == 'X') {
             temp[count] = str[i];
+            count++;
         }
     }
 }
