@@ -1,6 +1,6 @@
 #include "stack.h"
 
-void push(stack **p, char c) {
+void push(stack **p, size_t c) {
     stack *temp = NULL;
     temp = calloc(1, sizeof(stack));
     temp->c = c;
@@ -8,9 +8,9 @@ void push(stack **p, char c) {
     *p = temp;
 }
 
-char pop(stack **p) {
+size_t pop(stack **p) {
     stack *temp = *p;
-    char c;
+    size_t c;
     c = temp->c;
     *p = temp->next;
     free(temp);

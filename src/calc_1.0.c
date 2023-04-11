@@ -9,13 +9,13 @@ int main() {
     char c = 'e';
     stack *p = NULL;
     push(&p, a);
-    printf("%c\n", p->c);
+    printf("%c\n", (char)p->c);
     push(&p, b);
-    printf("%c\n", p->c);
+    printf("%c\n", (char)p->c);
     push(&p, c);
-    printf("%c\n", p->c);
+    printf("%c\n", (char)p->c);
     while (p != NULL) {
-        printf("%c\n", pop(&p));
+        printf("%c\n", (char)pop(&p));
     }
 
     return 0;
