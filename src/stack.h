@@ -5,11 +5,11 @@
 #include <stdlib.h>
 
 typedef struct stack {
-    size_t c;
+    size_t value;
     struct stack *next;
 } stack;
 
-void push(stack **p, size_t c);
+void push(stack **p, size_t value);
 size_t pop(stack **p);
 
 #endif
