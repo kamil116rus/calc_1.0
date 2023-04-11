@@ -13,6 +13,6 @@ clang-format -i *.c *.h
 
 git add . 
 git commit -m"$parametr1 $parametr2"
-git push origin main
+git push origin develop
 
 #gcc -Wall -Werror -Wextra 

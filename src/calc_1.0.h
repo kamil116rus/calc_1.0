@@ -4,3 +4,5 @@
 #define MAX_STR 100
 #define SUCCES 1
 #define FAIL 0
+
+#endif
