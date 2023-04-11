@@ -9,6 +9,7 @@ typedef struct stack {
     struct stack *next;
 } stack;
 
-#endif #indef STACK_H
+void push(stack **p, char c);
+char pop(stack **p);
 
 #endif
