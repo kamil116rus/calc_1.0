@@ -27,8 +27,8 @@ int reverse_polish_notation(char *str) {
                     temp[count] = (char)pop(&p);
                     count++;
                 }
-                pop(&p);
-                count_staples--;
+                pop(&p);          // удаляем скобку из стэка
+                count_staples--;  // уменьшаем счетчик скобок
             } else {
                 res = FAIL;
                 continue;
