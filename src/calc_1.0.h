@@ -1,5 +1,5 @@
-#ifndef CALC_1_0_h
-#define CALC_1_0_h
+#ifndef CALC_1_0_H
+#define CALC_1_0_H
 
 #define MAX_STR 100
 #define SUCCES 1
