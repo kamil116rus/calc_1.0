@@ -8,27 +8,29 @@ int is_alfa(char c);
 
 void parser() {
     char c;
-    c = getchar();
+    getch(&c);
+
     while (c != '\n') {
-        if (is_space(c)) {
-            c = getchar();
-        }
         char temp[10];
         int j = 0;
+
+        if (is_space(c)) {
+            getch(&c);
+        }
         if (is_digit(c)) {
             while (is_digit(c)) {
                 temp[j] = c;
                 j++;
-                c = getchar();
+                getch(&c);
             }
             temp[j] = '\0';
             printf("%s\n", temp);
         }
-        j = 0;
         if (is_alfa(c)) {
+            j = 0;
             while (is_alfa(c)) {
                 temp[j] = c;
-                c = getchar();
+                getch(&c);
                 j++;
             }
             temp[j] = '\0';
@@ -36,10 +38,12 @@ void parser() {
         }
         if (is_delim(c)) {
             printf("%c\n", c);
-            c = getchar();
+            getch(&c);
         }
     }
 }
+
+void getch(char *c) { *c = getchar(); }
 
 int is_digit(char c) {
     int res = NO;

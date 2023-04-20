@@ -8,10 +8,10 @@
 #include "parser.h"
 
 int main() {
-    char *str;
-    str = calloc(MAX_STR, sizeof(char));
-    scanf("%s", str);
-    parser(str);
-    free(str);
+    // char *str;
+    // str = calloc(MAX_STR, sizeof(char));
+    // scanf("%s", str);
+    parser();
+    // free(str);
     return 0;
 }
