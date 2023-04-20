@@ -9,11 +9,9 @@ int is_alfa(char c);
 void parser() {
     char c;
     getch(&c);
-
     while (c != '\n') {
         char temp[10];
         int j = 0;
-
         if (is_space(c)) {
             getch(&c);
         }
@@ -24,7 +22,7 @@ void parser() {
                 getch(&c);
             }
             temp[j] = '\0';
-            printf("%s\n", temp);
+            printf("%s\n", temp);  // заменить на список
         }
         if (is_alfa(c)) {
             j = 0;
@@ -34,10 +32,10 @@ void parser() {
                 j++;
             }
             temp[j] = '\0';
-            printf("%s\n", temp);
+            printf("%s\n", temp);  // заменить на список
         }
         if (is_delim(c)) {
-            printf("%c\n", c);
+            printf("%c\n", c);  // заменить на список
             getch(&c);
         }
     }
