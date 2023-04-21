@@ -4,8 +4,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-int is_alfa(char c);
-
 void parser() {
     char c;
     getch(&c);
