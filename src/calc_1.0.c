@@ -10,8 +10,9 @@
 
 int main() {
     list *p = NULL;
-
-    parser();
+    // p = init();
+    parser(p);
+    print_list(p);
     // free(str);
     return 0;
 }

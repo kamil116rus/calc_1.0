@@ -1,17 +1,19 @@
 #ifndef LIST_H
 #define LIST_H
 
+#include <stdio.h>
 #include <stdlib.h>
 
 typedef enum type_t { DELIMETR, VARIABLE, NUMBER } type_t;
 
 typedef struct list {
-    size_t *leks;
+    char leks[5];
     type_t token_type;
     struct list *next;
 } list;
 
-list *init();
-void push_the_list(list *top, size_t *str, type_t type);
+list *init(char *str, type_t type);
+void print_list(list *p);
+void push_the_list(list *top, char *str, type_t type);
 
 #endif

@@ -1,14 +1,10 @@
 #include "parser.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-void parser() {
+void parser(list *p) {
     char c;
     getch(&c);
     while (c != '\n') {
-        char temp[10];
+        char *temp = calloc(10, sizeof(char));
         int j = 0;
         if (is_space(c)) {
             getch(&c);
@@ -20,7 +16,8 @@ void parser() {
                 getch(&c);
             }
             temp[j] = '\0';
-            printf("%s\n", temp);  // заменить на список
+            push_the_list(p, temp, NUMBER);  // заменить на список
+                                             // print_list(p);
         }
         if (is_alfa(c)) {
             j = 0;
@@ -30,10 +27,12 @@ void parser() {
                 j++;
             }
             temp[j] = '\0';
-            printf("%s\n", temp);  // заменить на список
+            push_the_list(p, temp, VARIABLE);  // printf("%s\n", temp);  // заменить на список
         }
         if (is_delim(c)) {
-            printf("%c\n", c);  // заменить на список
+            temp[0] = c;
+            temp[1] = '\0';
+            push_the_list(p, temp, DELIMETR);  // printf("%c\n", c);  // заменить на список
             getch(&c);
         }
     }
