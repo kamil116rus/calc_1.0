@@ -10,7 +10,7 @@
 
 #include "list.h"
 
-void parser(list *p);
+void parser(list **p);
 void getch(char *c);
 int is_digit(char c);
 int is_space(char c);

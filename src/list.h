@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef enum type_t { DELIMETR, VARIABLE, NUMBER } type_t;
 
@@ -12,8 +13,8 @@ typedef struct list {
     struct list *next;
 } list;
 
-list *init(char *str, type_t type);
+void init(list **top, char *str, type_t type);
 void print_list(list *p);
-void push_the_list(list *top, char *str, type_t type);
+void push_the_list(list **top, char *str, type_t type);
 
 #endif

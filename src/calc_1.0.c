@@ -10,8 +10,11 @@
 
 int main() {
     list *p = NULL;
-    // p = init();
-    parser(p);
+
+    // // push_the_list(&p, "cos", NUMBER);
+    // push_the_list(&p, "13", NUMBER);
+    // push_the_list(&p, "sin", NUMBER);
+    parser(&p);
     print_list(p);
     // free(str);
     return 0;

@@ -1,10 +1,10 @@
 #include "parser.h"
 
-void parser(list *p) {
+void parser(list **p) {
     char c;
     getch(&c);
     while (c != '\n') {
-        char *temp = calloc(10, sizeof(char));
+        char temp[10];
         int j = 0;
         if (is_space(c)) {
             getch(&c);
