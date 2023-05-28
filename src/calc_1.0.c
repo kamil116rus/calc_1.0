@@ -9,10 +9,9 @@
 #include "parser.h"
 
 int main() {
-    list *p = NULL;
-
-   
-    parser(&p);
-    print_list(p);
+    list *p_in = NULL;
+    parser(&p_in);
+    list *p_rpn = NULL;
+    print_list(p_in);
     return 0;
 }
