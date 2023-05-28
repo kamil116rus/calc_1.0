@@ -29,22 +29,21 @@ void push_the_list(list **top, char *str, type_t type) {
         //  printf("-%s\n", top-);
     } /*иначе ошибка дописать*/
 }
+
 void delete_list(list **p) {
-    if (p == NULL)
+    if (*p == NULL)
         return;
     else if ((*p)->next == NULL)
-        free(p);
+        free(*p);
     else {
-        list *temp = p;
-        while ((temp->next)->next != NULL) {
-            temp = temp->next;
+        list **temp = p;
+        while (((*temp)->next)->next != NULL) {
+            temp = &(*temp)->next;
         }
-        free(temp->next);
-        temp->next = NULL;
+        free((*temp)->next);
+        (*temp)->next = NULL;
         delete_list(p);
     }
-
-    if
 }
 
 void print_list(list *p) {

@@ -15,6 +15,7 @@ typedef struct list {
 
 void init(list **top, char *str, type_t type);
 void print_list(list *p);
+void delete_list(list **p);
 void push_the_list(list **top, char *str, type_t type);
 
 #endif

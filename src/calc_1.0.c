@@ -11,7 +11,8 @@
 int main() {
     list *p_in = NULL;
     parser(&p_in);
-    list *p_rpn = NULL;
+    // list *p_rpn = NULL;
     print_list(p_in);
+    delete_list(&p_in);
     return 0;
 }
