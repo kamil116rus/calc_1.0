@@ -12,7 +12,7 @@ echo "Вы запустили скрипт с именем $script_name и па�
 clang-format -i *.c *.h
 
 git add . 
-git commit -m"$parametr1 $parametr2 $parametr3 $parametr4 $parametr5 $parametr6 $parametr7"
+git commit -m"$parametr1 $parametr2 $3 $4 $5 $6 $7"
 git push origin main
 
 #gcc -Wall -Werror -Wextra 
