@@ -5,8 +5,6 @@
 
 #include "stack.h"
 #define MAX_STR 100
-#define SUCCES 1
-#define FAIL 0
 
 #define YES 1
 #define NO 0

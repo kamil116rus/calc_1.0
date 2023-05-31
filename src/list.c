@@ -2,6 +2,7 @@
 
 void init(list **top, char *str, type_t type) {
     list *temp = calloc(1, sizeof(list));
+    if (temp == NULL) return;
     temp->next = NULL;
     temp->token_type = type;
     strcat(temp->leks, str);

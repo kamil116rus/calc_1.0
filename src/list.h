@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "calc_1.0.h"
+
 typedef enum type_t { DELIMETR, VARIABLE, NUMBER } type_t;
 
 typedef struct list {
