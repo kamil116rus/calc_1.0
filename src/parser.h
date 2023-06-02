@@ -1,9 +1,6 @@
 #ifndef PARSER_H
 #define PARSER_H
 
-#define YES 1
-#define NO 0
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

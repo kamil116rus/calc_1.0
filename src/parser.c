@@ -41,33 +41,33 @@ void parser(list **p) {
 void getch(char *c) { *c = getchar(); }
 
 int is_digit(char c) {
-    int res = NO;
+    int res = FAIL;
     if (c >= 48 && c <= 57) {
-        res = YES;
+        res = OK;
     }
     return res;
 }
 
 int is_alfa(char c) {
-    int res = NO;
+    int res = FAIL;
     if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122)) {
-        res = YES;
+        res = OK;
     }
     return res;
 }
 
 int is_space(char c) {
-    int res = NO;
+    int res = FAIL;
     if (c == ' ' || c == '\t' || c == '\r') {
-        res = YES;
+        res = OK;
     }
     return res;
 }
 
 int is_delim(char c) {
-    int res = NO;
+    int res = FAIL;
     if (strchr("+-/*%^=()", c) /*|| c==9 || c=='\r' || c==0*/) {
-        res = YES;
+        res = OK;
     }
     return res;
 }
