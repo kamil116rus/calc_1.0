@@ -17,4 +17,12 @@ int is_space(char c);
 int is_delim(char c);
 int is_alfa(char c);
 
+typedef struct errors {
+    int memory;
+    int staples;
+    int unknown_argument;
+} errors;
+
+errors init_errors();
+
 #endif

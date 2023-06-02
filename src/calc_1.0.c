@@ -11,7 +11,7 @@
 
 int main() {
     list *p_in = NULL;
-    errors error;
+    errors error = init_errors();
 
     parser(&p_in);
     // list *p_rpn = NULL;

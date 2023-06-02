@@ -5,10 +5,4 @@
 #define OK 1
 #define FAIL 0
 
-typedef struct errors {
-    int memory;
-    int staples;
-    int unknown_argument;
-} errors;
-
 #endif

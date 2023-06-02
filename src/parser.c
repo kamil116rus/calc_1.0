@@ -71,3 +71,11 @@ int is_delim(char c) {
     }
     return res;
 }
+
+errors init_errors() {
+    errors error;
+    error.memory = OK;
+    error.staples = OK;
+    error.unknown_argument = OK;
+    return error;
+}
